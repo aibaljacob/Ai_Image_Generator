@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.imgg{
+    height: 40vh;
+    background: url("images/bg.jpg");
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.imgg::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: #121212;
+}
+
+.imgg .content{
+    color: #fff;
+    padding: 0 15px;
+    max-width :760px;
+    text-align: center;
+    position: relative;
+}
+
+.imgg h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.imgg p{
+    font-size: 1.35rem;
+    margin-top: 10px;
+}
+
+.imgg .genform{
+    height: 56px;
+    width: 100%;
+    display: flex;
+    padding: 6px;
+    margin: 45px 0 15px;
+    align-items:center ;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 30px;
+}
+
+.genform .prompt{
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0 17px;
+}
+
+.genform .controls{
+    display: flex;
+    height: 100%;
+    gap: 15px;
+}
+
+.genform .imgq{
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 1rem;
+}
+
+.genform .gbtn{
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 0 25px;
+    cursor: pointer;
+    border-radius: 30px;
+    background: #4949e7;
+}
+
+.gallery .imgcard{
+    width: 285px;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #f2f2f2;
+}
+
+.gallery .imgcard img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery{
+    display: flex;
+    gap: 15px;
+    padding: 0 15px;
+    max-width: 1250px;
+    margin: 50px auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery .imgcard .dwnld{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #fff;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery .imgcard:not(.loading):hover .dwnld{
+    display: flex;
+
+}
+
+.gallery .imgcard .dwnld img{
+    width: 14px;
+    height: 14px;
+}
+
+.gallery .imgcard.loading img{
+    width: 80px;
+    height: 80px;
+}
+
+@media screen and (max-width: 760px){
+    .imgg h1{
+        font-size: 1.8rem
+    }
+
+    .imgg p{
+        font-size: 1rem;
+    }
+
+    .imgg .genform{
+        margin-top: 30px;
+        height: 52px;
+        display: block;
+    }
+
+    .genform .controls{
+        height: 40px;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .genform .imgq{
+        color: #fff;
+    }
+
+    .genform .imgq option{
+        color: #000;
+    }
+
+    .genform .gbtn{
+        height: 100%;
+    }
+
+    .gallery .imgcard:not(.loading) .dwnld{
+        display: flex;
+    }
+
+    .gallery{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width : 550px) {
+    .gallery .imgcard{
+        width: 100%;
+    }
+}
